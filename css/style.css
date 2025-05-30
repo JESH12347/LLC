@@ -1,8 +1,11 @@
-body {
+html , body {
   font-family: 'Poppins', sans-serif;
-
   color: #48494a;
-  background-image: url(../images/body-bg.jpg);
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  
 }
 
 .layout_padding {
@@ -159,7 +162,7 @@ a:focus {
 }
 
 .navbar-brand span {
-  font-size: 20px;
+  font-size: px;
   font-weight: 700;
   color: #fefefe;
 }
