@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation Lab</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Lato', sans-serif;
+        }
+      html, body{
+         width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #222;
+        }
+        .wrapper{
+            display: flex;
+            width: 10%;
+            justify-content: space-around;
+        }
+        .card{
+            width: 280px;
+            height: 360px;
+            padding: 2rem 1rem;
+            background: #fff;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+            transition: 0.5 ease-in-out;
+        }
+        .card:hover{
+            transform: translateY(20px);
+        }
+        .card:before{
+            content: :"";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: linearGradient(to bottom, rgba(0,176,155,0.5), rgba(150,201,61,1));
+            z-index: 2;
+            transition: 0.5s all;
+            opacity: 0;
+        }
+        .card:hover:before{
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+ <div class="wrapper">
+    <div class="card">
+        <img src="images/SolarEnergy.jpeg" alt="SolarEnergy Simulation">
+        <div class="info">
+            <h1>Solar Energy Simulation</h1>
+            <p>Lorem ipsum dolor sit amet consectetur </p>
+            <a href="https://mokshil17.github.io/Solar_energy_visualizer/solar_energy.html" class="btn">Explore</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images/PendulumSimulation.jpeg" alt="Pendulum Simulation">
+        <div class="info">
+            <h1>Pendulum Simulation</h1>
+            <p>Lorem ipsum dolor sit amet consectetur </p>
+            <a href="https://blaiserods26.github.io/LLC-ScienceExp/simple-pendulum.html" class="btn">Explore</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images/SpaceMentor.jpeg" alt="Space Mentor Simulation">
+        <div class="info">
+            <h1>Space Mentor Simulation</h1>
+            <p>Lorem ipsum dolor sit amet consectetur </p>
+            <a href="https://yugankkk.github.io/space/" class="btn">Explore</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images/WaterFilter.jpeg" alt="Make a Water Filter">
+        <div class="info">
+            <h1>Make a Water Filter</h1>
+            <p>Lorem ipsum dolor sit amet consectetur </p>
+            <a href="https://vap3x.github.io/water_filtration/" class="btn">Explore</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images/RefractionSimulator.jpeg" alt="Refraction Simulator">
+        <div class="info">
+            <h1>Refraction Simulator</h1>
+            <p>Lorem ipsum dolor sit amet consectetur </p>
+            <a href="https://anelkaagnelbarnesllc.netlify.app/" class="btn">Explore</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images/CarbonCycle.jpeg" alt="Learn About the Carbon Cycle">
+        <div class="info">
+            <h1>The Carbon Cycle</h1>
+            <p>Learn About the Carbon Cycle </p>
+            <a href="https://ayushshelar123.github.io/Carbon-Cycle-Website" class="btn">Explore</a>
+        </div>
+    </div>
+ </div>  
+</body>
+</html>
