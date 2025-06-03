@@ -12,15 +12,20 @@
       html, body{
          width: 100%;
             height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            
             background-color: #222;
         }
         .wrapper{
             display: flex;
-            width: 10%;
-            justify-content: space-around;
+         gap: 20px;
+         flex-wrap: wrap;
+         justify-content: center;
+         align-items: center;
+         align-content: center;
+         width: 900px; /* Adjust as needed for your card width and gap */
+         max-width: 100%;
+         margin: 0 auto;
+            
         }
         .card{
             width: 280px;
@@ -29,22 +34,27 @@
             background: #fff;
             position: relative;
             display: flex;
+            flex: 1 1 280px; /* Grow, shrink, basis */
+            max-width: 280px;
+            min-width: 250px;
             align-items: flex-end;
             box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
-            transition: 0.5 ease-in-out;
+            transition: 0.5s ease-in-out;
+            object-fit: contain;
         }
         .card:hover{
             transform: translateY(20px);
         }
         .card:before{
-            content: :"";
+            content: "";
             position: absolute;
+            
             top: 0;
             left: 0;
             display: block;
             width: 100%;
             height: 100%;
-            background: linearGradient(to bottom, rgba(0,176,155,0.5), rgba(150,201,61,1));
+            background: linear-gradient(to bottom, rgba(0,176,155,0.5), rgba(150,201,61,1));
             z-index: 2;
             transition: 0.5s all;
             opacity: 0;
@@ -52,17 +62,58 @@
         .card:hover:before{
             opacity: 1;
         }
-
+        .card img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .card .info{
+            position: relative;
+            z-index: 3;
+            color: #fff;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.5s all;
+        }
+        .card:hover .info{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        .card .info h1{
+            margin: 0;
+        }
+        .card .info p{
+            letter-spacing: 1px;
+            font-size: 15px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+        }
+        .card .info .btn{
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background: #fff;
+            color: #000;
+            font-size: bold;
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+        }
+        .card .info .btn:hover{
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+        }
     </style>
 </head>
 <body>
+    
  <div class="wrapper">
     <div class="card">
         <img src="images/SolarEnergy.jpeg" alt="SolarEnergy Simulation">
         <div class="info">
             <h1>Solar Energy Simulation</h1>
             <p>Lorem ipsum dolor sit amet consectetur </p>
-            <a href="https://mokshil17.github.io/Solar_energy_visualizer/solar_energy.html" class="btn">Explore</a>
+            <a href="https://mokshil17.github.io/Solar_energy_visualizer/solar_energy.html" class="btn" target="_blank" rel="noopener noreferrer">Explore</a>
         </div>
     </div>
     <div class="card">
@@ -70,7 +121,7 @@
         <div class="info">
             <h1>Pendulum Simulation</h1>
             <p>Lorem ipsum dolor sit amet consectetur </p>
-            <a href="https://blaiserods26.github.io/LLC-ScienceExp/simple-pendulum.html" class="btn">Explore</a>
+            <a href="https://blaiserods26.github.io/LLC-ScienceExp/simple-pendulum.html" class="btn" target="_blank" rel="noopener noreferrer">Explore</a>
         </div>
     </div>
     <div class="card">
@@ -78,7 +129,7 @@
         <div class="info">
             <h1>Space Mentor Simulation</h1>
             <p>Lorem ipsum dolor sit amet consectetur </p>
-            <a href="https://yugankkk.github.io/space/" class="btn">Explore</a>
+            <a href="https://yugankkk.github.io/space/" class="btn" target="_blank" rel="noopener noreferrer">Explore</a>
         </div>
     </div>
     <div class="card">
@@ -86,7 +137,7 @@
         <div class="info">
             <h1>Make a Water Filter</h1>
             <p>Lorem ipsum dolor sit amet consectetur </p>
-            <a href="https://vap3x.github.io/water_filtration/" class="btn">Explore</a>
+            <a href="https://vap3x.github.io/water_filtration/" class="btn" target="_blank" rel="noopener noreferrer">Explore</a>
         </div>
     </div>
     <div class="card">
@@ -94,7 +145,7 @@
         <div class="info">
             <h1>Refraction Simulator</h1>
             <p>Lorem ipsum dolor sit amet consectetur </p>
-            <a href="https://anelkaagnelbarnesllc.netlify.app/" class="btn">Explore</a>
+            <a href="https://anelkaagnelbarnesllc.netlify.app/" class="btn" target="_blank" rel="noopener noreferrer">Explore</a>
         </div>
     </div>
     <div class="card">
@@ -102,7 +153,7 @@
         <div class="info">
             <h1>The Carbon Cycle</h1>
             <p>Learn About the Carbon Cycle </p>
-            <a href="https://ayushshelar123.github.io/Carbon-Cycle-Website" class="btn">Explore</a>
+            <a href="https://ayushshelar123.github.io/Carbon-Cycle-Website" class="btn" target="_blank" rel="noopener noreferrer">Explore</a>
         </div>
     </div>
  </div>  
